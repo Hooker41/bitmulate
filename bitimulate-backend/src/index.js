@@ -7,6 +7,7 @@ const {
 
 const Koa = require('koa');
 const Router = require('koa-router');
+const bodyParser = require('koa-bodyparser');
 
 const api = require('./api');
 const db = require('./db');
@@ -14,7 +15,7 @@ const db = require('./db');
 db.connect();
 
 const app = new Koa();
-
+app.use(bodyParser());
 //router setting
 const router = new Router();
 router.use('/api', api.routes());

@@ -7,5 +7,5 @@ auth.get('/', (ctx) => {
     ctx.body = 'Router Setting Finished!';
 })
 
-auth.post('/register', authCtrl.register);
+auth.post('/register/local', authCtrl.localRegister);
 module.exports = auth;
