@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { Button } from 'components';
+import { Route } from 'react-router-dom';
+import { HomePage, TradePage } from 'components';
 
 class App extends Component{
     render(){
         return (
             <div>
-                Hi Atomic Design!
-                <Button/>
+                <Route exact path="/" component = { HomePage } />
+                <Route path="/trade" component = { TradePage } />
             </div>
         )
     }
